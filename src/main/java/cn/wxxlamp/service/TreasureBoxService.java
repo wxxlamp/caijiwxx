@@ -9,6 +9,12 @@ import cn.wxxlamp.model.TreasureBox;
  */
 public class TreasureBoxService {
 
+    /**
+     * 获取神秘箱子，同时获取神秘箱子中的数字
+     * @param boxNum 箱子数目，本次比赛是10个
+     * @param beginStr hash值前几位，本次比赛是前五位00000
+     * @return boxNum个神秘箱子
+     */
     public TreasureBox[] createTreasureBoxes(Integer boxNum, String beginStr) {
         int loops = boxNum;
         TreasureBox[] treasureBoxes = new TreasureBox[loops];
@@ -28,6 +34,11 @@ public class TreasureBoxService {
         return treasureBoxes;
     }
 
+    /**
+     * 获取打开箱子的神秘数字
+     * @param treasureBoxes 箱子
+     * @return 神秘数字
+     */
     public Long[] getMagicNumsFromTreasureBox(TreasureBox[] treasureBoxes) {
         Long[] magicNums = new Long[treasureBoxes.length];
         for (int i = 0; i < magicNums.length; i++) {
@@ -36,6 +47,10 @@ public class TreasureBoxService {
         return magicNums;
     }
 
+    /**
+     * 打印神秘数字
+     * @param magicNums 神秘数字
+     */
     public void printMagicNums(Long[] magicNums) {
         System.out.println("所有宝箱的神秘数字依次如下：");
         for (Long magicNum : magicNums) {
