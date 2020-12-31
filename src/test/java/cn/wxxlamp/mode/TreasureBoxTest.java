@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
+ * {@link TreasureBox}中hash方法的测试类
  * @author wxxlamp
  * @date 2020/12/31~15:37
  */
