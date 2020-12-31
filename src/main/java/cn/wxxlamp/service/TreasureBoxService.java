@@ -19,6 +19,7 @@ public class TreasureBoxService {
             for (long j = 0; j < Long.MAX_VALUE; j++) {
                 treasureBox.setMagicNumber(j);
                 if (treasureBox.getCurHash().startsWith(beginStr)) {
+                    System.out.println("第 " + treasureBox.getNumber() + " 个宝箱开启完成，神秘数字是：" + j);
                     break;
                 }
             }
@@ -36,6 +37,7 @@ public class TreasureBoxService {
     }
 
     public void printMagicNums(Long[] magicNums) {
+        System.out.println("所有宝箱的神秘数字依次如下：");
         for (Long magicNum : magicNums) {
             System.out.print(magicNum + " ");
         }
