@@ -16,7 +16,6 @@ public class TreasureBoxService {
             TreasureBox treasureBox = new TreasureBox();
             treasureBox.setNumber(i + 1);
             treasureBox.setPreHash(i == 0 ? "0" : treasureBoxes[i-1].getCurHash());
-            treasureBox.setTimeStamp(System.currentTimeMillis());
             for (long j = 0; j < Long.MAX_VALUE; j++) {
                 treasureBox.setMagicNumber(j);
                 if (treasureBox.getCurHash().startsWith(beginStr)) {
