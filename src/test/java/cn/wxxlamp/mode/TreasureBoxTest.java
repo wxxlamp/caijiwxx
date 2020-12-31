@@ -21,7 +21,7 @@ public class TreasureBoxTest {
         TreasureBox treasureBox = new TreasureBox();
         treasureBox.setNumber(0);
         treasureBox.setTimeStamp(111L);
-        treasureBox.setMagicNumber(3);
+        treasureBox.setMagicNumber(3L);
         treasureBox.setPreHash("0");
         return treasureBox;
     }

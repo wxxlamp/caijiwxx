@@ -33,7 +33,7 @@ public class TreasureBox {
     /**
      * 神秘数字
      */
-    private Integer magicNumber;
+    private Long magicNumber;
 
     public Integer getNumber() {
         return number;
@@ -70,11 +70,11 @@ public class TreasureBox {
         this.curHash = curHash;
     }
 
-    public Integer getMagicNumber() {
+    public Long getMagicNumber() {
         return magicNumber;
     }
 
-    public void setMagicNumber(Integer magicNumber) {
+    public void setMagicNumber(Long magicNumber) {
         this.magicNumber = magicNumber;
     }
 }

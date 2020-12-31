@@ -17,7 +17,7 @@ public class TreasureBoxService {
             treasureBox.setNumber(i + 1);
             treasureBox.setPreHash(i == 0 ? "0" : treasureBoxes[i-1].getCurHash());
             treasureBox.setTimeStamp(System.currentTimeMillis());
-            for (int j = 0; j < Integer.MAX_VALUE; j++) {
+            for (long j = 0; j < Long.MAX_VALUE; j++) {
                 treasureBox.setMagicNumber(j);
                 if (treasureBox.getCurHash().startsWith(beginStr)) {
                     break;
@@ -28,16 +28,16 @@ public class TreasureBoxService {
         return treasureBoxes;
     }
 
-    public Integer[] getMagicNumsFromTreasureBox(TreasureBox[] treasureBoxes) {
-        Integer[] magicNums = new Integer[treasureBoxes.length];
+    public Long[] getMagicNumsFromTreasureBox(TreasureBox[] treasureBoxes) {
+        Long[] magicNums = new Long[treasureBoxes.length];
         for (int i = 0; i < magicNums.length; i++) {
             magicNums[i] = treasureBoxes[i].getMagicNumber();
         }
         return magicNums;
     }
 
-    public void printMagicNums(Integer[] magicNums) {
-        for (Integer magicNum : magicNums) {
+    public void printMagicNums(Long[] magicNums) {
+        for (Long magicNum : magicNums) {
             System.out.print(magicNum + " ");
         }
     }

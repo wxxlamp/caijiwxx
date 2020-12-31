@@ -23,7 +23,7 @@ public class ApplicationRunner {
     public static void main(String[] args) {
         TreasureBoxService treasureBoxService = new TreasureBoxService();
         TreasureBox[] treasureBoxes = treasureBoxService.createTreasureBoxes(BOX_NUM, BEGIN_STR);
-        Integer[] magicNums = treasureBoxService.getMagicNumsFromTreasureBox(treasureBoxes);
+        Long[] magicNums = treasureBoxService.getMagicNumsFromTreasureBox(treasureBoxes);
         treasureBoxService.printMagicNums(magicNums);
     }
 }
