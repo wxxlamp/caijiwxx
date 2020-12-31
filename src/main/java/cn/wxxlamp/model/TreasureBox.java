@@ -15,11 +15,6 @@ public class TreasureBox {
     private Integer number;
 
     /**
-     * 开启宝箱的时间戳
-     */
-    private Long timeStamp;
-
-    /**
      * 上个宝箱的hash值，
      * 第一个宝箱的hash值为0，
      * 采用sha256方式加密
@@ -43,14 +38,6 @@ public class TreasureBox {
         this.number = number;
     }
 
-    public Long getTimeStamp() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(Long timeStamp) {
-        this.timeStamp = timeStamp;
-    }
-
     public String getPreHash() {
         return preHash;
     }
@@ -60,8 +47,7 @@ public class TreasureBox {
     }
 
     public String getCurHash() {
-        String allAttribute = this.number.toString() + this.timeStamp.toString()
-                + this.preHash + this.magicNumber.toString();
+        String allAttribute = this.number.toString() + this.preHash + this.magicNumber.toString();
         this.curHash = EncryptUtils.string2Sha256(allAttribute);
         return curHash;
     }

@@ -12,7 +12,7 @@ public class TreasureBoxTest {
 
     @Test
     public void testHash() {
-        String excepted = "86dbdf834c32f31aa7e5c3a62d9e75cda45d54cdd3e6b16183e21f45137497e6";
+        String excepted = "88c0413bfef1d0570a8a6f9c780a8d2c9e90c4d107551d62bf3cec9ff1f5b634";
         TreasureBox treasureBox = createTreasureBox();
         Assert.assertEquals(treasureBox.getCurHash(), excepted);
     }
@@ -20,7 +20,6 @@ public class TreasureBoxTest {
     private TreasureBox createTreasureBox() {
         TreasureBox treasureBox = new TreasureBox();
         treasureBox.setNumber(0);
-        treasureBox.setTimeStamp(111L);
         treasureBox.setMagicNumber(3L);
         treasureBox.setPreHash("0");
         return treasureBox;
