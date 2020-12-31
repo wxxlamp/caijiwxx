@@ -43,7 +43,7 @@ public class EncryptUtils {
         for (byte aByte : bytes) {
             temp = Integer.toHexString(aByte & 0xFF);
             if (temp.length() == 1) {
-                //1得到一位的进行补0操作
+                // 1得到一位的进行补0操作
                 stringBuffer.append("0");
             }
             stringBuffer.append(temp);
